@@ -1,0 +1,24 @@
+html,body{
+  line-height:1;
+  font-family :"PingFang SC" ,"STHeitiSC-Light","Helvetica",Arial,sans-serif;
+  color:#04d104;
+};
+
+.clearfix{
+  display: inline-block;
+  &:after{
+    display: block;
+    content:" ";
+    height:0;
+    line-height:0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.bg-image(@url){
+  background-image: url("@{url}@2x.png");
+  @media (-webkit-min-device-aspect-ratio: 3) ,(min-device-aspect-ratio:3){
+    background-image :url("@{url}@3x.png")
+  };
+}
